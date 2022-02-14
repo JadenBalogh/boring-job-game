@@ -13,7 +13,7 @@ public class ClickText : MonoBehaviour
 
     void Update()
     {
-        transform.position += new Vector3(0, moveSpeed, 0);
+        transform.position += new Vector3(0, moveSpeed, 0) * Time.deltaTime;
         textComp.color = new Color(0, 0, 0, alpha);
         alpha -= Time.deltaTime / fadeTime;
         if (alpha <= 0)
